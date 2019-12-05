@@ -11,8 +11,8 @@
 
 <view class="content-1">
 <view class="content-2">设置用户名</view>
-<view class="content-3">查看</view>
-<view class="content-4">git config --global user.name '用户名'</view>
+<view wx:if="{{answer}}" class="content-3" bindtap="btnFindanswer">查看</view>
+<view wx:else class="content-4" bindtap="btnFindanswer">git config --global user.name '用户名'</view>
 </view>
 
 <view class="level-1">

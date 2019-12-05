@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "识记中",
+  "usingComponents": {
+    "i-button": "../dist/button/index"
+  }
+}

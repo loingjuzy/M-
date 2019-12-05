@@ -43,6 +43,37 @@
   width: 100%;
 }
 
+.content-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  width: 100%;
+height: 200rpx;
+}
+
+.content-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  color: #333;
+  width: 100%;
+  height: 500rpx;
+  
+}
+
+.content-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  color: green;
+  width: 100%;
+  height: 500rpx;
+}
+
 .level-1 {
   display: flex;
   flex-direction: row;

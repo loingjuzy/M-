@@ -1,14 +1,17 @@
 {
-  "pages":[
+  "pages": [
+    "pages/yest/index",
+    "pages/complete/index",
     "pages/remember/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f1f2f3",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
-  "style": "v2"
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }
