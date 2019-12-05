@@ -1,0 +1,31 @@
+<view class="progressBar-1">
+<view class="progressBar-2">
+</view>
+</view>
+
+<view class="cardnumber-1">
+<text>卡片  6 / 15</text>
+<image src="/pages/images/setting.png"></image>
+</view>
+
+
+<view class="content-1">
+<view class="content-2">设置用户名</view>
+<view class="content-3">查看</view>
+<view class="content-4">git config --global user.name '用户名'</view>
+</view>
+
+<view class="level-1">
+<view class="level-2">
+<image  src="/pages/images/easy.png"></image>
+<text>太简单了</text>
+</view>
+<view class="level-2">
+<image  src="/pages/images/normal.png"></image>
+<text>熟悉中</text>
+</view>
+<view class="level-2">
+<image src="/pages/images/hard.png"></image>
+<text>不认识</text>
+</view>
+</view>
