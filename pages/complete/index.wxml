@@ -8,4 +8,4 @@
 <view class="content-2">已完成一组卡片学习</view>
 <view class="content-3">快去参加测试吧</view>
 </view>
-<button class="btnClass">开始测试</button>
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">开始测试</i-button>

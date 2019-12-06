@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/yest/index",
+    "pages/exam/index",
     "pages/complete/index",
     "pages/remember/index",
     "pages/index/index",
@@ -12,6 +12,6 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
+
   "sitemapLocation": "sitemap.json"
 }

@@ -9,7 +9,7 @@
 }
 
 .progressBar-2 {
-  background: orange;
+  background: #259B24;
   width: 100%;
   height: 6rpx;
 }
@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 800rpx;
+  height: 900rpx;
 
 }
 
@@ -41,14 +41,4 @@ image {
   font-size: 28rpx;
 }
 
-
-
-.btnClass {
-  width: 90%;
-  margin-top: 20rpx;
-  background-color: orange;
-  color: white;
-  border-radius: 98rpx; 
-
-}
 

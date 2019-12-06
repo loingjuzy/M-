@@ -1,4 +1,4 @@
-/* pages/remember/index.wxss */
+/* pages/exam/index.wxss */
 
 .progressBar-1 {
   margin: 0rpx 0rpx;
@@ -22,16 +22,14 @@
   font-size: 30rpx;
 }
 
-.cardnumber-1 text {
+.cardnumber-2 {
   display: block;
-  margin: 12rpx 0 0 14rpx;
+  margin: 30rpx 0 0 14rpx;
 }
 
-.cardnumber-1 image {
-  margin: 16rpx 14rpx 0 0;
+.cardnumber-3 {
+  margin: 30rpx 14rpx 0 0;
   display: block;
-  width: 32rpx;
-  height: 32rpx;
 }
 
 .content-1 {

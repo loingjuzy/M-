@@ -1,4 +1,4 @@
-// pages/yest/index.js
+// pages/exam/index.js
 Page({
 
   /**
