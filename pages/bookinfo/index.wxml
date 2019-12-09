@@ -1,0 +1,34 @@
+<!--pages/bookinfo/index.wxml-->
+<view class="book-1">
+  <image src="/pages/{{wordList[0].image}}" />
+  <view class="book-2">
+    <view class="title">{{wordList[0].title}}</view>
+    <text>来源：{{wordList[0].sorce}}</text>
+    <text>词汇量：{{wordList[0].number}}</text>
+    <text>标签：{{wordList[0].tip}}</text>
+    <text>简介：{{wordList[0].introduction}}</text>
+  </view>
+</view>
+
+
+<view class="level-1">
+  <view class="item{{item[0] == showitem?'active':''}}" wx:for="{{levelitem}}" bindtap='bindshow' wx:key data-classify="{{item[0]}}">
+    <text>{{item[1]}}</text>
+    <text>{{item[0]}}</text>
+  </view>
+</view>
+
+<view class="word-1" wx:for="{{wordList}}" wx:key>
+<view class="word-2">
+<text class="word-3">
+{{item.content}}
+</text>
+<text class="word-4">
+{{item.answer}}
+</text>
+</view>
+<view class="word-5">
+<image src="/pages/images/mark-{{item.mark?2:1}}.png" />
+</view>
+
+</view>

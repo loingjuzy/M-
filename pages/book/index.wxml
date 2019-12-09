@@ -1,0 +1,17 @@
+<!--pages/book/index.wxml-->
+<view class="content-1">
+  <view class="item{{item == showitem?'active':''}}" wx:for="{{typeitem}}" bindtap='bindshow' wx:key data-classify="{{item}}">{{item}}</view>
+</view>
+<view class="content-2">
+{{showitem}}<text>(共{{bookCount}}本)</text>
+</view>
+<view class="bookList-1" wx:for="{{bookList}}" wx:key>
+<image src="/pages/{{item.image}}" />
+<view class="bookList-2" data-bookid="{{item.bookid}}" bindtap='getBookInfo'>
+<view class="title">{{item.title}}</view>
+<text>来源：{{item.sorce}}</text>
+<text>词汇量：{{item.number}}</text>
+<text>标签：{{item.tip}}</text>
+<text>简介：{{item.introduction}}</text>
+</view>
+</view>

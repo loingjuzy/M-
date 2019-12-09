@@ -9,7 +9,7 @@
 }
 
 .progressBar-2 {
-  background: #259B24;
+  background: #259b24;
   width: 200rpx;
   height: 6rpx;
 }
@@ -32,72 +32,51 @@
   display: block;
 }
 
+.question-1 {
+  text-align: center;
+  color: #333;
+  width: 100%;
+  height: 200rpx;
+  line-height: 200rpx;
+  font-size: 40rpx;
+}
+
 .content-1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   height: 700rpx;
   width: 100%;
 }
 
-.content-2 {
+.item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #333;
-  width: 100%;
-height: 200rpx;
+  text-align: center;
+  background-color: #fff;
+  color: #101010;
+  width: 80%;
+  height: 120rpx;
+  /* line-height:120rpx; */
+  border-radius: 10rpx;
+  font-size: 28rpx;
 }
 
-.content-3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  color: #333;
-  width: 100%;
-  height: 500rpx;
-  
-}
 
-.content-4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  color: green;
-  width: 100%;
-  height: 500rpx;
-}
-
-.level-1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  color: #333;
-  font-size: 30rpx;
-}
-
-.level-2 {
+.itemactive {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border-radius: 16rpx;
-  width: 200rpx;
-  height: 240rpx;
-}
-
-.level-1 image {
-  margin: 0 0 34rpx 0;
-  display: block;
-  width: 96rpx;
-  height: 96rpx;
-}
-
-.level-1 text {
-  display: block;
+  text-align: center;
+  background-color: lightgreen;
+  color: #fff;
+  width: 80%;
+  height: 120rpx;
+  /* line-height:120rpx; */
+  border-radius: 10rpx;
+  font-size: 28rpx;
 }

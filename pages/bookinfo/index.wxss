@@ -1,0 +1,122 @@
+/* pages/bookinfo/index.wxss */
+
+.book-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: solid 1rpx #f1f2f3;
+  background-color: #fff;
+  width: 100%;
+  height: 280rpx;
+  border-radius: 20rpx;
+}
+
+.book-1 image {
+  display: block;
+  margin: 25rpx 26rpx;
+  width: 180rpx;
+  height: 240rpx;
+}
+
+.book-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 240rpx;
+}
+
+.title {
+  color: #333;
+  font-size: 30rpx;
+  font-family: PingFangSC-regular;
+}
+
+.book-2 text {
+  color: #999;
+  font-size: 24rpx;
+  font-family: PingFangSC-regular;
+}
+
+.level-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  height: 110rpx;
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: #999;
+  width: 120rpx;
+  height: 100%;
+  font-size: 28rpx;
+  font-family: PingFangSC-regular;
+}
+
+.itemactive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  color: #259b24;
+  width: 120rpx;
+  height: 100%;
+  font-size: 28rpx;
+  border-bottom: solid 4rpx #259b24;
+  font-family: PingFangSC-regular;
+}
+
+.word-1 {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-between;
+  background-color: #fff;
+  height: 140rpx;
+  width: 100%;
+  border: solid 1rpx #f1f2f3;
+  border-radius: 10rpx;
+}
+
+.word-1 image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.word-2 {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-around;
+  background-color: #fff;
+  height: 80%;
+}
+
+.word-3 {
+  font-size: 28rpx;
+  color: #333;
+  font-family: PingFangSC-regular;
+}
+
+.word-4 {
+  font-size: 24rpx;
+  color: #999;
+  font-family: PingFangSC-regular;
+}
+
+.word-5 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  height: 100%;
+}
