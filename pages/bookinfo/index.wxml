@@ -1,34 +1,38 @@
 <!--pages/bookinfo/index.wxml-->
 <view class="body">
-<view class="book-1">
-  <image wx:if='{{wordList[0].image}}' src="/pages/{{wordList[0].image}}" />
-  <view class="book-2">
-    <view class="title">{{wordList[0].title}}</view>
-    <text>来源：{{wordList[0].sorce}}</text>
-    <text>词汇量：{{wordList[0].number}}</text>
-    <text>标签：{{wordList[0].tip}}</text>
-    <text>简介：{{wordList[0].introduction}}</text>
+  <view class="book-1">
+    <image wx:if='{{wordList[0].image}}' src="/pages/{{wordList[0].image}}" />
+    <view class="book-2">
+      <view class="title">{{wordList[0].title}}</view>
+      <text>来源：{{wordList[0].sorce}}</text>
+      <text>词汇量：{{wordList[0].number}}</text>
+      <text>标签：{{wordList[0].tip}}</text>
+      <text>简介：{{wordList[0].introduction}}</text>
+    </view>
   </view>
-</view>
 
 
-<view class="level-1">
-  <view class="item{{item[0] == showitem?'active':''}}" wx:for="{{levelitem}}" bindtap='bindshow' wx:key data-classify="{{item[0]}}">
-    <text>{{item[1]}}</text>
-    <text>{{item[0]}}</text>
+  <view class="level-1">
+    <view class="item{{item[0] == showitem?'active':''}}" wx:for="{{levelitem}}" bindtap='bindshow' wx:key data-classify="{{item[0]}}">
+      <text>{{item[1]}}</text>
+      <text>{{item[0]}}</text>
+    </view>
   </view>
-</view>
 
-<view class="word-1" wx:for="{{wordList}}" wx:key wx:if="{{showwords[item.level?item.level:0] || item.mark == showwords}}">
-  <view class="word-2">
-    <view class="word-3">
-{{item.content}}
-</view>
-    <view class="word-4">
-{{item.answer}}
-</view>
+  <view class="word-1" wx:for="{{wordList}}" wx:key wx:if="{{showwords[item.level?item.level:0] || item.mark == showwords}}">
+    <view class="word-2">
+      <view class="word-3">
+        {{item.content}}
+      </view>
+      <view class="word-4">
+        {{item.answer}}
+      </view>
+    </view>
+    <image src="/pages/images/mark-{{item.mark?2:1}}.png" />
   </view>
-  <image src="/pages/images/mark-{{item.mark?2:1}}.png" />
+
+<view class="bookbtn">
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">背此书籍</i-button>
 </view>
 
 </view>

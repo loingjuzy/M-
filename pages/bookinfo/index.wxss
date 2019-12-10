@@ -107,14 +107,13 @@
   height: 100%;
   width: 80%;
   margin: 0 16rpx;
-
 }
 
 .word-3 {
   font-size: 28rpx;
   color: #333;
   font-family: PingFangSC-regular;
-    overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -123,7 +122,16 @@
   font-size: 24rpx;
   color: #999;
   font-family: PingFangSC-regular;
-    overflow: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.bookbtn {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background:rgb(255,255,255,0.7);
+  height: 140rpx;
+  /* opacity:0.5;  */
 }
