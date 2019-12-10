@@ -1,4 +1,8 @@
 /* pages/book/index.wxss */
+.body{
+width: 100%;
+overflow: hidden;
+}
 
 .content-1 {
   display: flex;

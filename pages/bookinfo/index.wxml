@@ -1,6 +1,7 @@
 <!--pages/bookinfo/index.wxml-->
+<view class="body">
 <view class="book-1">
-  <image src="/pages/{{wordList[0].image}}" />
+  <image wx:if='{{wordList[0].image}}' src="/pages/{{wordList[0].image}}" />
   <view class="book-2">
     <view class="title">{{wordList[0].title}}</view>
     <text>来源：{{wordList[0].sorce}}</text>
@@ -18,17 +19,16 @@
   </view>
 </view>
 
-<view class="word-1" wx:for="{{wordList}}" wx:key>
-<view class="word-2">
-<text class="word-3">
+<view class="word-1" wx:for="{{wordList}}" wx:key wx:if="{{showwords[item.level?item.level:0] || item.mark == showwords}}">
+  <view class="word-2">
+    <view class="word-3">
 {{item.content}}
-</text>
-<text class="word-4">
-{{item.answer}}
-</text>
 </view>
-<view class="word-5">
-<image src="/pages/images/mark-{{item.mark?2:1}}.png" />
+    <view class="word-4">
+{{item.answer}}
+</view>
+  </view>
+  <image src="/pages/images/mark-{{item.mark?2:1}}.png" />
 </view>
 
 </view>

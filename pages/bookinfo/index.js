@@ -6,8 +6,9 @@ Page({
    */
   data: {
     wordList: '',
-    levelitem: ['陌生词', '熟悉中', '已精通', '已标记'],
+    levelitem: '',
     showitem: '陌生词',
+    showwords: [1, 0, 0, 0, 0],
   },
   getBookInfo: function(parameter) { //获取书本列表信息
     let that = this;
@@ -44,6 +45,28 @@ Page({
     let classify = event.currentTarget.dataset.classify;
     let that = this;
     console.log(classify) //输出的结果就是你点击的
+    switch (classify) {
+      case '陌生词':
+        that.setData({
+          showwords: [1, 0, 0, 0, 0], //更新
+        });
+        break;
+      case '熟悉中':
+        that.setData({
+          showwords: [0, 1, 1, 1, 0], //更新
+        });
+        break;
+      case '已精通':
+        that.setData({
+          showwords: [0, 0, 0, 0, 1], //更新
+        });
+        break;
+      case '已标记':
+        that.setData({
+          showwords: 1, //更新
+        });
+        break;
+    }
     that.setData({
       showitem: classify, //更新
     });

@@ -1,4 +1,6 @@
 <!--pages/book/index.wxml-->
+<view class="body">
+
 <view class="content-1">
   <view class="item{{item == showitem?'active':''}}" wx:for="{{typeitem}}" bindtap='bindshow' wx:key data-classify="{{item}}">{{item}}</view>
 </view>
@@ -13,5 +15,6 @@
 <text>词汇量：{{item.number}}</text>
 <text>标签：{{item.tip}}</text>
 <text>简介：{{item.introduction}}</text>
+</view>
 </view>
 </view>
