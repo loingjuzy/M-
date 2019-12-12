@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/examine/index",
     "pages/book/index",
     "pages/bookinfo/index",
     "pages/mine/index",
@@ -9,38 +10,37 @@
     "pages/index/index",
     "pages/logs/logs"
   ],
-    "tabBar": {
-      "color": "#66666",
-      "selectedColor": "#259B24",
-      "borderStyle": "white",
-      "backgroundColor": "#ffffff",
-      "list": [
-        {
-          "pagePath": "pages/book/index",
-          "text": "书本",
-          "iconPath": "pages/images/book-1.png",
-          "selectedIconPath": "pages/images/book-2.png"
-        },
-        {
-          "pagePath": "pages/exam/index",
-          "text": "背书",
-          "iconPath": "pages/images/exam-1.png",
-          "selectedIconPath": "pages/images/exam-2.png"
-        },
-        {
-          "pagePath": "pages/mine/index",
-          "text": "我的",
-          "iconPath": "pages/images/mine-1.png",
-          "selectedIconPath": "pages/images/mine-2.png"
-        }
-      ]
-    },
+  "tabBar": {
+    "color": "#66666",
+    "selectedColor": "#259B24",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/examine/index",
+        "text": "背书",
+        "iconPath": "pages/images/exam-1.png",
+        "selectedIconPath": "pages/images/exam-2.png"
+      },
+      {
+        "pagePath": "pages/book/index",
+        "text": "书本",
+        "iconPath": "pages/images/book-1.png",
+        "selectedIconPath": "pages/images/book-2.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "pages/images/mine-1.png",
+        "selectedIconPath": "pages/images/mine-2.png"
+      }
+    ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f1f2f3",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-
   "sitemapLocation": "sitemap.json"
 }

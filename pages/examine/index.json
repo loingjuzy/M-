@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "背书详情",
+  "usingComponents": {
+    "i-button": "../dist/button/index"
+  }
+}

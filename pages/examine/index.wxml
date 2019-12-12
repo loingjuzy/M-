@@ -1,0 +1,30 @@
+<!--pages/examine/index.wxml-->
+<view class="header">
+  <view class="header-title">当前在背</view>
+  <view class="header-btn">更换书籍</view>
+</view>
+
+<view class="content">
+  <view class="content-imagetext">
+    <image src="/pages/images/01.jpg" />
+    <view class="content-text">
+      <view class="text-title" style="color:red;">git词汇</view>
+      <view class="text-num">词汇量：30</view>
+      <view class="bar-hard">
+        <view class="bar-normal">
+          <view class="bar-easy">
+          </view>
+        </view>
+      </view>
+      <view class="content-level">
+        <image src="/pages/images/easy-1.png" />
+        <view>精通20%</view>
+        <image src="/pages/images/normal-1.png" />
+        <view>熟悉50%</view>
+        <image src="/pages/images/hard-1.png" />
+        <view>陌生30%</view>
+      </view>
+    </view>
+  </view>
+  <view class="content-btn">开始练习</view>
+</view>

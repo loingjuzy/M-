@@ -1,0 +1,123 @@
+/* pages/examine/index.wxss */
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 140rpx;
+}
+
+.header-title {
+  color: #101010;
+  font-size: 36rpx;
+  margin-left: 20rpx;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8bc34a;
+  color: white;
+  font-size: 24rpx;
+  border-radius: 80rpx;
+  width: 160rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  font-family: PingFang-SC;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  width: 700rpx;
+  height: 414rpx;
+  margin: 0 25rpx;
+  border-radius: 20rpx;
+}
+
+.content-imagetext {
+  margin-left: 46rpx;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: center; */
+  width: 100%;
+}
+
+.content image {
+  width: 180rpx;
+  height: 240rpx;
+}
+
+.content-text {
+  margin-left: 46rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 240rpx;
+}
+
+.text-title {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.text-num {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.bar-hard {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  background-color: #d5e8d4;
+  width: 400rpx;
+  height: 16rpx;
+  border-radius: 10rpx;
+}
+
+.bar-normal {
+  background-color: #8bc34a;
+  width: 200rpx;
+  border-radius: 10rpx;
+  height: 16rpx;
+}
+
+.bar-easy {
+  background-color: #259b24;
+  width: 80rpx;
+  border-radius: 10rpx;
+  height: 16rpx;
+}
+
+.content-level {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.content-level image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.content-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #259b24;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 40rpx;
+  width: 90%;
+  height: 80rpx;
+  font-family: PingFang-SC;
+}
