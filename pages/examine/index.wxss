@@ -84,14 +84,14 @@
 
 .bar-normal {
   background-color: #8bc34a;
-  width: 200rpx;
+  /* width: 200rpx; */
   border-radius: 10rpx;
   height: 16rpx;
 }
 
 .bar-easy {
   background-color: #259b24;
-  width: 80rpx;
+  /* width: 80rpx; */
   border-radius: 10rpx;
   height: 16rpx;
 }

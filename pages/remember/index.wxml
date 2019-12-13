@@ -1,22 +1,22 @@
 <view class="progressBar-1">
-<view class="progressBar-2">
+<view class="progressBar-2" style="width:{{studyNum/total*100}}%;">
 </view>
 </view>
 
 <view class="cardnumber-1">
-<text>卡片  6 / 15</text>
+<text>卡片  {{studyNum}} / {{total}}</text>
 <image src="/pages/images/setting.png"></image>
 </view>
 
 
 <view class="content-1">
-<view class="content-2">设置用户名</view>
+<view class="content-2">{{userStudyInfo[currentQuestion].content}}</view>
 <view wx:if="{{answer}}" class="content-3" bindtap="btnFindanswer">查看</view>
-<view wx:else class="content-4" bindtap="btnFindanswer">git config --global user.name '用户名'</view>
+<view wx:else class="content-4" bindtap="btnFindanswer">{{userStudyInfo[currentQuestion].answer}}</view>
 </view>
 
 <view class="level-1">
-<view class="level-2">
+<view class="level-2" bindtap="deleteQuestion">
 <image  src="/pages/images/easy.png"></image>
 <text>太简单了</text>
 </view>

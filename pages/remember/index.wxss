@@ -9,8 +9,7 @@
 }
 
 .progressBar-2 {
-  background: #259B24;
-  width: 200rpx;
+  background: #259b24;
   height: 6rpx;
 }
 
@@ -45,12 +44,12 @@
 
 .content-2 {
   display: flex;
-  flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   color: #333;
   width: 100%;
-height: 200rpx;
+  height: 200rpx;
 }
 
 .content-3 {
@@ -61,7 +60,6 @@ height: 200rpx;
   color: #333;
   width: 100%;
   height: 500rpx;
-  
 }
 
 .content-4 {
