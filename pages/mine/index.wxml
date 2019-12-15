@@ -1,2 +1,3 @@
 <!--pages/mine/index.wxml-->
-<text>pages/mine/index.wxml</text>
+<view class="header" ><image src="/pages/images/bg.jpg"></image></view>
+

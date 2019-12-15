@@ -1,13 +1,11 @@
 {
   "pages": [
     "pages/examine/index",
+    "pages/index/index",
     "pages/book/index",
     "pages/bookinfo/index",
     "pages/mine/index",
-    "pages/exam/index",
-    "pages/complete/index",
     "pages/remember/index",
-    "pages/index/index",
     "pages/logs/logs"
   ],
   "tabBar": {
@@ -18,7 +16,7 @@
     "list": [
       {
         "pagePath": "pages/examine/index",
-        "text": "背书",
+        "text": "学习",
         "iconPath": "pages/images/exam-1.png",
         "selectedIconPath": "pages/images/exam-2.png"
       },
@@ -37,6 +35,7 @@
     ]
   },
   "window": {
+    
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#f1f2f3",
     "navigationBarTitleText": "WeChat",

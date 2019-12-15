@@ -1,4 +1,7 @@
 {
-  "navigationBarTitleText": "识记中",
-  "usingComponents": {}
+  "navigationBarTitleText": "学习中",
+  "usingComponents": {
+    "i-button": "../dist/button/index",
+    "i-tag": "../../dist/tag/index"
+  }
 }

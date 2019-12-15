@@ -1,6 +1,7 @@
 <!--pages/examine/index.wxml-->
+<image class="header-1" src="/pages/images/background.jpg"></image>
 <view class="header">
-  <view class="header-title">当前在背</view>
+  <view class="header-title">当前在学</view>
   <view class="header-btn">更换书籍</view>
 </view>
 
@@ -11,18 +12,18 @@
       <view class="text-title">{{userStudyInfo.title}}</view>
       <view class="text-num">词汇量：{{userStudyInfo.number}}</view>
       <view class="bar-hard">
-        <view class="bar-normal" style="width: {{(userStudyInfo.easy+userStudyInfo.normal)*400}}rpx;">
-          <view class="bar-easy" style="width: {{userStudyInfo.easy*400}}rpx;">
+        <view class="bar-normal" style="width: {{userStudyInfo.easy+userStudyInfo.normal}}%;">
+          <view class="bar-easy" style="width: {{userStudyInfo.easy}}%;">
           </view>
         </view>
       </view>
       <view class="content-level">
         <image src="/pages/images/easy-1.png" />
-        <view>精通{{userStudyInfo.easy*100}}%</view>
+        <view>精通{{userStudyInfo.easy}}%</view>
         <image src="/pages/images/normal-1.png" />
-        <view>熟悉{{userStudyInfo.normal*100}}%</view>
+        <view>熟悉{{100-userStudyInfo.hard-userStudyInfo.easy}}%</view>
         <image src="/pages/images/hard-1.png" />
-        <view>陌生{{userStudyInfo.hard*100}}%</view>
+        <view>陌生{{userStudyInfo.hard}}%</view>
       </view>
     </view>
   </view>

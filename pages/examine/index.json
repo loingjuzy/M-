@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "背书详情",
+  "navigationBarTitleText": "学习详情",
   "usingComponents": {
     "i-button": "../dist/button/index"
   }

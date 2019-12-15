@@ -1,4 +1,6 @@
 // pages/examine/index.js
+const app = getApp()
+
 Page({
 
   /**
@@ -6,25 +8,14 @@ Page({
    */
   data: {
     userStudyInfo: '',
-    userInfo: {
-      "birthday": null,
-      "cratetime": "Thu, 12 Dec 2019 23:34:57 GMT",
-      "education": null,
-      "name": "萌芽的小石头",
-      "occupation": null,
-      "school": null,
-      "studying": 1,
-      "topimage": "/images/01.jpg",
-      "userid": 1
-    },
+    userInfo: ''
+
   },
-  getUserStudy: function() { //获取书本列表信息
+  getUserStudy: function(event) { //获取书本列表信息
     let that = this;
     wx.request({
       url: 'https://www.0752gh.com/getUserStudy',
-      data: {
-
-      },
+      data: event,
       header: { //请求头
         "Content-Type": "applciation/json"
       },
@@ -40,20 +31,76 @@ Page({
       fail: function(err) {
         // console.log("查询失败");
       }, //请求失败
-      complete: function() {}, //请求完成后执行的函数
+      complete: function() {
+        wx.hideLoading()
+      }, //请求完成后执行的函数
     })
   },
   startStudy: function() {
-    console.log(this.data.userInfo.studying, this.data.userInfo.userid);
     wx.navigateTo({
-      url: '/pages/remember/index?bookid=' + this.data.userInfo.studying + '&userid=' + this.data.userInfo.userid,
+      url: '/pages/remember/index?bookid=' + this.data.userStudyInfo.studying + '&userid=' + this.data.userStudyInfo.userid
+    })
+  },
+  getSysytemInfo: function() {
+    let that = this;
+    return new Promise(function(resolve, reject) {
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          that.setData({
+            userInfo: res.userInfo
+          })
+          resolve(res.userInfo);
+        }
+      })
+
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.getUserStudy();
+    wx.showLoading({
+      title: '加载中',
+    });
+    this.getSysytemInfo().then(res => {
+      this.getUserStudy(res);
+    })
+    // wx.showLoading({
+    //   title: '加载中',
+    // });
+    // if (app.globalData.userInfo) {
+    //   this.setData({
+    //     userInfo: app.globalData.userInfo
+    //   })
+    //   wx.hideLoading();
+    //   console.log('1')
+    // } else if (this.data.canIUse) {
+    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+    //   // 所以此处加入 callback 以防止这种情况
+    //   app.userInfoReadyCallback = res => {
+    //     this.setData({
+    //       userInfo: res.userInfo
+    //     })
+    //     wx.hideLoading();
+    //     console.log('2')
+    //   }
+    // } else {
+    //   // 在没有 open-type=getUserInfo 版本的兼容处理
+    //   wx.getUserInfo({
+    //     success: res => {
+    //       app.globalData.userInfo = res.userInfo
+    //       this.setData({
+    //         userInfo: res.userInfo
+    //       })
+    //       wx.hideLoading();
+    //       console.log('3');
+    //       // console.log(this.data.userInfo);
+    //     }
+    //   })
+    // }
+
+
   },
 
   /**

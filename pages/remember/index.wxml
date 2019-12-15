@@ -1,31 +1,77 @@
-<view class="progressBar-1">
-<view class="progressBar-2" style="width:{{studyNum/total*100}}%;">
-</view>
-</view>
-
-<view class="cardnumber-1">
-<text>卡片  {{studyNum}} / {{total}}</text>
-<image src="/pages/images/setting.png"></image>
+<view class="progressBar">
+  <view style="width:{{studyNum/total*100}}%;">
+  </view>
 </view>
 
 
-<view class="content-1">
-<view class="content-2">{{userStudyInfo[currentQuestion].content}}</view>
-<view wx:if="{{answer}}" class="content-3" bindtap="btnFindanswer">查看</view>
-<view wx:else class="content-4" bindtap="btnFindanswer">{{userStudyInfo[currentQuestion].answer}}</view>
-</view>
+<!-- 开始学习卡片组界面  -->
+<block wx:if="{{stepStatus == 0}}">
+  <view class="cardnumber">
+    <text><text style="color:green;font-size:32rpx;"> {{studyNum}}</text> / {{total}}</text>
+  </view>
 
-<view class="level-1">
-<view class="level-2" bindtap="deleteQuestion">
-<image  src="/pages/images/easy.png"></image>
-<text>太简单了</text>
-</view>
-<view class="level-2">
-<image  src="/pages/images/normal.png"></image>
-<text>熟悉中</text>
-</view>
-<view class="level-2">
-<image src="/pages/images/hard.png"></image>
-<text>不认识</text>
-</view>
-</view>
+  <view class="question-answer">
+    <view class="question">{{userStudyInfo[currentQuestion].content}}</view>
+    <i-tag wx:if="{{answer}}" class="i-tags" name="tips" type="border" bindtap="btnFindanswer">
+      tips
+    </i-tag> 
+
+    <view wx:else class="answer" bindtap="btnFindanswer">{{userStudyInfo[currentQuestion].answer}}</view>
+  </view>
+
+  <view class="level">
+    <view bindtap="changeQuestion" data-index="1">
+      <image src="/pages/images/easy.png"></image>
+      <text>太简单了</text>
+    </view>
+    <view bindtap="changeQuestion" data-index="2">
+      <image src="/pages/images/normal.png"></image>
+      <text>熟悉中</text>
+    </view>
+    <view bindtap="changeQuestion" data-index="3">
+      <image src="/pages/images/hard.png"></image>
+      <text>不认识</text>
+    </view>
+  </view>
+</block>
+
+
+<!-- 完成学习卡片组界面  -->
+<block wx:if="{{stepStatus == 1}}">
+  <view class="success-content">
+    <image src="/pages/images/complete.png"></image>
+    <view class="success-text1">已完成一组卡片学习</view>
+    <view class="success-text2">快去参加测试吧</view>
+  </view>
+  <i-button bind:click="startExamine" type="success" shape="circle" size="small">开始测试</i-button>
+</block>
+
+
+<!-- 正在测试卡片组界面  -->
+<block wx:if="{{stepStatus == 2}}">
+  <view class="cardnumber">
+    <text><text style="color:green;font-size:32rpx;"> {{studyNum}}</text> / {{total}}</text>
+  </view>
+
+  <view class="exam-question">
+    <view>{{examData[studyNum-1].content}}</view>
+  </view>
+  <radio-group class="answer-items" bindchange="getAnswerChange">
+    <radio wx:for="{{examData[studyNum-1].answerItems}}" wx:key value="{{item}}" checked="{{checked}}">{{item}}</radio>
+  </radio-group>
+  <view class="nextbtn">
+    <i-button bind:click="nextQuestion" type="success" shape="circle" size="small" disabled="{{!checkedValue}}">
+      {{studyNum == total?'完成':'下一题'}}</i-button>
+  </view>
+</block>
+
+
+<!-- 完成测试界面  -->
+<block wx:if="{{stepStatus == 3}}">
+  <view class="success-content">
+    <image src="/pages/images/complete.png"></image>
+    <view class="success-text">本轮答对了{{rightNumber}}个词组，正确率为{{rightNumber/total*100}}%</view>
+  </view>
+  <i-button bind:click="continueStudy" type="success" shape="circle" size="small">再背一组</i-button>
+  <i-button bind:click="backExamine" type="ghost" shape="circle" size="small">返回</i-button>
+</block>
