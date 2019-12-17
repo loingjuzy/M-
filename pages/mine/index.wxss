@@ -35,7 +35,12 @@
 }
 
 .userNickName {
-  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 36rpx;
+  height: 120rpx;
+  margin: 0 24rpx;
 }
 
 .useronline {
@@ -43,7 +48,10 @@
 }
 
 .usersorce {
-  margin-top: 300rpx;
+  top: 300rpx;
+  position: fixed;
+  z-index: 999;
+  background-color: #fff;
   display: flex;
   float: left;
   flex-flow: row wrap;
@@ -56,22 +64,44 @@
 }
 
 .usersorce view {
-  width: 33.33%;
+  width: 33%;
 }
 
-.usersorce view view {
+.imagetext {
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
 }
 
-.usersorce view image {
-  width: 32rpx;
-  height: 32rpx;
-  margin-right: 12rpx;
+.usersorce image {
+  width: 30rpx;
+  height: 30rpx;
+  margin:0 4rpx; 
+  /* margin-right: 16rpx; *//* border: solid red 1rpx; */
 }
 
-.usersorce view view text{
-font-size: 20rpx;
+.usersorce text {
+  font-size: 28rpx;
+  color: #999;
+  margin:0 4rpx; 
+  /* border: solid red 1rpx; */
+}
+
+
+.userlist {
+  margin-top: 550rpx;
+  background-color: #fff;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  width: 100%;
+  height: 400rpx;
+  border: solid #F1F2F3 1rpx;
+}
+
+.userlist image{
+  width: 32rpx;
+  height: 32rpx;
 }

@@ -14,19 +14,36 @@
 </view>
 
 <view class="usersorce">
-  <view style="color:orangered;font-size:42rpx;">6.9W</view>
+  <view style="color:orangered;font-size:42rpx;">6.9k</view>
   <view style="color:blue;font-size:42rpx;">5.1k</view>
   <view style="color:green;font-size:42rpx;">98%</view>
-  <view>
+  <view class="imagetext">
     <image src="/pages/images/book.png" />
     <text>书本</text>
   </view>
-  <view>
+  <view class="imagetext">
     <image src="/pages/images/word.png" />
     <text>精通</text>
   </view>
-  <view>
+  <view class="imagetext">
     <image src="/pages/images/right.png" />
     <text>正确</text>
   </view>
+</view>
+
+<view class="userlist">
+<image src="/pages/images/new.png"/>
+<image src="/pages/images/owner.png"/>
+<image src="/pages/images/version.png"/>
+<image src="/pages/images/respond.png"/>
+<image src="/pages/images/know.png"/>
+<image src="/pages/images/about.png"/>
+
+<!-- <view><image src=""/><text>已学习书籍</text><image src=""/></view>
+<view><image src=""/><text>已精通词汇</text><image src=""/></view>
+<view><image src=""/><text>基本设置</text><image src=""/></view>
+<view><image src=""/><text>意见反馈</text><image src=""/></view>
+<view><image src=""/><text>版本日志</text><image src=""/></view>
+<view><image src=""/><text>关于</text><image src=""/></view> -->
+
 </view>
